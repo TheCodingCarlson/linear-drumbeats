@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/TheCodingCarlson/linear-drumbeats#readme",
   "devDependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
   }
 }
