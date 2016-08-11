@@ -1,5 +1,27 @@
-$primary-color: lightblue;
+$primary-color: #277554;
 
 body {
 	background-color: $primary-color;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	text-align: center;
+}
+
+.bar {
+	border-top: 5px solid #0F5738;
+	height: 50px;
+}
+
+.fa {
+	// padding-right: 6.5%;
+	color: #0F5738;
+
+	&:last-child:not(:only-child) {
+   		// padding-right: 0;
+	}
 }

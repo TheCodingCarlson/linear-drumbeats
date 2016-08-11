@@ -1,2 +1,15 @@
 body {
-  background-color: lightblue; }
+  background-color: #277554; }
+
+table {
+  width: 100%; }
+
+td {
+  text-align: center; }
+
+.bar {
+  border-top: 5px solid #0F5738;
+  height: 50px; }
+
+.fa {
+  color: #0F5738; }
