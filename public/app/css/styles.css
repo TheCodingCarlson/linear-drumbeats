@@ -7,9 +7,15 @@ table {
 td {
   text-align: center; }
 
+.staff {
+  margin-top: 20%; }
+
 .bar {
   border-top: 5px solid #0F5738;
   height: 50px; }
+  .bar:last-child:not(:only-child) {
+    border-bottom: 5px solid #0F5738; }
 
 .fa {
-  color: #0F5738; }
+  color: #75AF96;
+  visibility: hidden; }

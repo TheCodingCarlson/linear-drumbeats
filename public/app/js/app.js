@@ -4,16 +4,37 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 	
 	var getRandomNumber = function() {
 		return Math.ceil(Math.random() * 5);
-	}
+	};
 
-	$scope.getRandomArray = function() {
-		$scope.arr = [];
+	var getRandomArray = function() {
+		var arr = [];
 
 		for(var i = 0; i < 8; i++) {
-			$scope.arr.push(getRandomNumber());
+			arr.push([i + 1, getRandomNumber()]);
 		}
-		return $scope.arr;
+		console.log(arr);
+		return arr;
+	};
+
+	var compare = function(tableRow, arr) {
+		
+		$(tableRow).each(function(index) {
+			
+			for(var i = 0; i < arr.length; i++) {
+				var tableDataVal = $(this).data('gridId').toString();
+				var arrVal = arr[i].toString();
+
+				if(tableDataVal === arrVal) {
+					$(this).css('visibility', 'visible');
+				}
+			}
+		});
 	}
 
+	$scope.getRandomBeat = function() {
+	
+		compare('.fa', getRandomArray());
+		
+	};
 }]);
 

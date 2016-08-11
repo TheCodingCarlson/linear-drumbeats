@@ -12,16 +12,19 @@ td {
 	text-align: center;
 }
 
+.staff {
+	margin-top: 20%;
+}
+
 .bar {
 	border-top: 5px solid #0F5738;
 	height: 50px;
+	&:last-child:not(:only-child) {
+		border-bottom: 5px solid #0F5738;
+	}
 }
 
 .fa {
-	// padding-right: 6.5%;
-	color: #0F5738;
-
-	&:last-child:not(:only-child) {
-   		// padding-right: 0;
-	}
+	color: #75AF96;	
+	visibility: hidden;
 }
