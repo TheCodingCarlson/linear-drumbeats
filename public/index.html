@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="DrummingApp">
 <head>
-	<base href='/' />
+<!-- 	<base href="/" /> -->
 
 	<!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-  	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  	<link rel="stylesheet" type="text/css" href="app/css/styles.css">
 
   	<!-- Angular JS -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
@@ -24,10 +24,12 @@
 
    	<!-- Angular Route -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+
+    <script type="text/javascript" src="app/js/app.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
-		<h1>TEST</h1>
+	<div class="container-fluid" ng-controller="MainCtrl">
+		<h1>{{ test }}</h1>
 	</div>
 
 
