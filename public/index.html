@@ -32,13 +32,26 @@
 </head>
 <body>
 	<div class="container-fluid" ng-controller="MainCtrl">
+		<div class="row header">
+			<div class="col-md-12">
+				<h1>Linear Drumbeat Maker</h1>
+			</div>	
+		</div>
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3 staff">
+			<div class="col-md-3 col-sm-2 col-xs-1 labels">
+				<h1>Hi-Hat</h1>
+				<h1>High Tom</h1>
+				<h1>Snare Drum</h1>
+				<h1>Low Tom</h1>
+				<h1>Bass Drum</h1>
+			</div>
+			<div class="col-md-6 col-sm-10 col-xs-11 staff">
 				<table>
-
+				<!-- Note Group Lines -->
 					<div class="note-grouping"></div>
 					<div class="note-grouping group-two"></div>
 
+					<!-- Phantom Row -->
 					<tr class="top-lines">
 						<td class="phantom-1"><div class="fa" data-grid-id="[1,0]"></div></td>
 
@@ -157,13 +170,13 @@
 
 						<td class="col-7 row-5"><i class="fa fa-circle fa-3x" aria-hidden="true" data-grid-id="[7,5]"></i></td>
 
-						<td class="col-8 row-8><i class="fa fa-circle fa-3x" aria-hidden="true" data-grid-id="[8,5]"></i></td>
+						<td class="col-8 row-8"><i class="fa fa-circle fa-3x" aria-hidden="true" data-grid-id="[8,5]"></i></td>
 					</tr>
 				</table>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-12">
 				<div class="btns">
 				<button type="button" class="btn btn-primary btn-lg create" ng-click="getRandomBeat()" ng-disabled="pushedCreate">Get A Beat!</button>
 

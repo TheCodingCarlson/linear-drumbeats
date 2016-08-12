@@ -14,6 +14,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		for(var i = 0; i < 8; i++) {
 			arr.push([i + 1, getRandomNumber()]);
 		}
+		console.log(arr);
 		return arr;
 	};
 
@@ -42,6 +43,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 					$(this).animate({ opacity: 1 }, 500);
 
 					drawStems(arrVal.split(','));
+					console.log(arrVal);
 
 				}
 			}

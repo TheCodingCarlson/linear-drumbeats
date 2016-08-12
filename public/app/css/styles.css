@@ -1,9 +1,10 @@
 body {
   background-color: #277554;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px; }
 
 table {
-  width: 100%; }
+  width: 98%; }
 
 td {
   text-align: right;
@@ -18,16 +19,28 @@ td {
   width: 120px;
   border: none; }
   .btn:hover {
-    background-color: #499273; }
-  .btn:active:focus {
     background-color: #0F5738; }
+  .btn:active:focus {
+    background-color: #0F5738;
+    outline: 0; }
 
 .btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
-  background-color: #499273;
+  background-color: #0F5738;
   border: none; }
 
 .staff {
-  margin-top: 20%; }
+  margin-top: 200px; }
+
+.header {
+  text-align: center; }
+
+.labels {
+  text-align: right;
+  margin-top: 240px; }
+  .labels h1 {
+    font-size: 1.563em;
+    padding-bottom: 8px;
+    color: #75AF96; }
 
 .bar {
   border-top: 5px solid #0F5738;
@@ -43,7 +56,30 @@ td {
   border-top: 5px solid transparent;
   width: 38%;
   display: inline-block;
-  margin-left: 12%; }
+  margin-left: 11%; }
 
 .phantom {
   height: 30px; }
+
+@media only screen and (max-width: 990px) {
+  .labels {
+    margin-top: 350px; }
+    .labels h1 {
+      font-size: 1.2em;
+      padding-bottom: 12px; } }
+
+@media only screen and (max-width: 760px) {
+  .labels {
+    text-align: left; }
+    .labels h1 {
+      font-size: 1em;
+      padding-bottom: 15px; } }
+
+@media only screen and (max-width: 600px) {
+  .labels h1 {
+    font-size: 0.85em; } }
+
+@media only screen and (max-width: 480px) {
+  .labels h1 {
+    font-size: 0.65em;
+    padding-bottom: 12px; } }
