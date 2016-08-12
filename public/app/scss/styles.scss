@@ -14,7 +14,8 @@ table {
 }
 
 td {
-	text-align: center;
+	text-align: right;
+	border-right: 5px solid transparent;
 }
 
 .btns {
@@ -39,7 +40,6 @@ td {
 	border: none;
 }
 
-
 .staff {
 	margin-top: 20%;
 }
@@ -53,33 +53,17 @@ td {
 }
 
 .fa {
-	color: $secondary-color;	
+	color: $secondary-color;
 	opacity: 0;
 }
 
-.note-lines {
-	border-top: 5px solid $secondary-color;
-	width: 50%;
-}
-.note-line {
-	border-right: 5px solid $secondary-color;
-	position: absolute;
-	height: 200px;
-	z-index: 2;
-	padding-left: 7%;
+.note-grouping {
+	border-top: 5px solid transparent;
+	width: 38%;
+	display: inline-block;
+	margin-left: 12%;
 }
 
-// .note-lines {
-// 	margin-top: 20px;
-// 	height: 200px;
-// 	position: relative;
-// 	top: 200px;
-// 	right: 28px;
-// 	z-index: 2;
-
-// 	.section {
-// 		border-right: 5px solid $secondary-color;
-// 		margin: 0 auto;
-// 		height: 50%;
-// 	}
-// }
+.phantom {
+	height: 30px;
+}

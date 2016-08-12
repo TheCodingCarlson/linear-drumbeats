@@ -6,7 +6,8 @@ table {
   width: 100%; }
 
 td {
-  text-align: center; }
+  text-align: right;
+  border-right: 5px solid transparent; }
 
 .btns {
   text-align: center;
@@ -38,13 +39,11 @@ td {
   color: #75AF96;
   opacity: 0; }
 
-.note-lines {
-  border-top: 5px solid #75AF96;
-  width: 50%; }
+.note-grouping {
+  border-top: 5px solid transparent;
+  width: 38%;
+  display: inline-block;
+  margin-left: 12%; }
 
-.note-line {
-  border-right: 5px solid #75AF96;
-  position: absolute;
-  height: 200px;
-  z-index: 2;
-  padding-left: 7%; }
+.phantom {
+  height: 30px; }
