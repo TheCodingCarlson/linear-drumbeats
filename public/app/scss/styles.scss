@@ -12,12 +12,16 @@ body {
 }
 
 table {
-	width: 98%;
+	width: 100%;
 }
 
 td {
 	text-align: right;
 	border-right: 5px solid transparent;
+}
+
+th {
+	color: $secondary-color;
 }
 
 .btns {
@@ -44,11 +48,13 @@ td {
 }
 
 .staff {
-	margin-top: 200px;
+	margin-top: 100px;
 }
 
 .header {
 	text-align: center;
+	color: $secondary-color;
+	margin-top: 100px;
 }
 
 .labels {
@@ -77,48 +83,35 @@ td {
 
 .note-grouping {
 	border-top: 5px solid transparent;
-	width: 38%;
 	display: inline-block;
-	margin-left: 11%;
-}
-
-.phantom {
-	height: 30px;
-}
-
-@media only screen and (max-width: 990px) {
-	.labels {
-		margin-top: 350px;
-		h1 {
-			font-size: 1.2em;
-			padding-bottom: 12px;
+	width: 30%;
+	&.phantom {
+		
+	}
+	&.reg {
+		&.two {
+			margin-left: 1%;
+		}
+		&.three {
+			margin-left: 9%;
+		
 		}
 	}
 }
 
-@media only screen and (max-width: 760px) {
-	.labels {
-		text-align: left;
-		h1 {
-			font-size: 1em;
-			padding-bottom: 15px;
+@media only screen and (max-width: 450px) {
+	.note-grouping {
+		width: 29%;
+		&.one {
+				width: 15%;
 		}
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.labels {
-		h1 {
-			font-size: 0.85em;
-		}
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.labels {
-		h1 {
-			font-size: 0.65em;
-			padding-bottom: 12px;
+		&.reg {
+			&.two {
+				margin-left: 20%;
+			}
+			&.three {
+				margin-left: 7%;
+			}
 		}
 	}
 }

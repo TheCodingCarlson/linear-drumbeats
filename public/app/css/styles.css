@@ -4,11 +4,14 @@ body {
   font-size: 16px; }
 
 table {
-  width: 98%; }
+  width: 100%; }
 
 td {
   text-align: right;
   border-right: 5px solid transparent; }
+
+th {
+  color: #75AF96; }
 
 .btns {
   text-align: center;
@@ -29,10 +32,12 @@ td {
   border: none; }
 
 .staff {
-  margin-top: 200px; }
+  margin-top: 100px; }
 
 .header {
-  text-align: center; }
+  text-align: center;
+  color: #75AF96;
+  margin-top: 100px; }
 
 .labels {
   text-align: right;
@@ -54,32 +59,19 @@ td {
 
 .note-grouping {
   border-top: 5px solid transparent;
-  width: 38%;
   display: inline-block;
-  margin-left: 11%; }
+  width: 30%; }
+  .note-grouping.reg.two {
+    margin-left: 1%; }
+  .note-grouping.reg.three {
+    margin-left: 9%; }
 
-.phantom {
-  height: 30px; }
-
-@media only screen and (max-width: 990px) {
-  .labels {
-    margin-top: 350px; }
-    .labels h1 {
-      font-size: 1.2em;
-      padding-bottom: 12px; } }
-
-@media only screen and (max-width: 760px) {
-  .labels {
-    text-align: left; }
-    .labels h1 {
-      font-size: 1em;
-      padding-bottom: 15px; } }
-
-@media only screen and (max-width: 600px) {
-  .labels h1 {
-    font-size: 0.85em; } }
-
-@media only screen and (max-width: 480px) {
-  .labels h1 {
-    font-size: 0.65em;
-    padding-bottom: 12px; } }
+@media only screen and (max-width: 450px) {
+  .note-grouping {
+    width: 29%; }
+    .note-grouping.one {
+      width: 15%; }
+    .note-grouping.reg.two {
+      margin-left: 20%; }
+    .note-grouping.reg.three {
+      margin-left: 7%; } }

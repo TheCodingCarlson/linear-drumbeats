@@ -14,7 +14,6 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		for(var i = 0; i < 8; i++) {
 			arr.push([i + 1, getRandomNumber()]);
 		}
-		console.log(arr);
 		return arr;
 	};
 
@@ -43,7 +42,6 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 					$(this).animate({ opacity: 1 }, 500);
 
 					drawStems(arrVal.split(','));
-					console.log(arrVal);
 
 				}
 			}
@@ -54,7 +52,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		compare('.fa', getRandomArray());
 		$scope.pushedCreate = true;
 		$scope.pushedClear = false;
-		$('.note-grouping').css('border-top', '5px solid #75AF96');
+		$('.reg').css('border-top', '5px solid #75AF96');
 		
 	};
 
@@ -72,5 +70,26 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		$scope.pushedCreate = false;
 		$scope.pushedClear = true;
 	};
-}]);
 
+	var windowWidth = $(window).width();
+
+	var iconResize = function(width) {
+		if(width < 450) {
+			$('.fa').each(function() {
+				$(this).removeClass('fa-2x').addClass('fa-lg');
+			});
+		} else if(width > 450) {
+			$('.fa').each(function() {
+				$(this).removeClass('fa-lg').addClass('fa-2x');
+			});
+		}
+	};
+
+	iconResize(windowWidth);
+
+	$(window).resize(function() {
+		var newWindowWidth = $(window).width();
+
+		iconResize(newWindowWidth);
+	});
+}]);
