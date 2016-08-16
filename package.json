@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,7 +16,7 @@
     "url": "https://github.com/TheCodingCarlson/linear-drumbeats/issues"
   },
   "homepage": "https://github.com/TheCodingCarlson/linear-drumbeats#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2"
