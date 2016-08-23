@@ -22,15 +22,20 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		var col = coordinate[0];
 		var row = coordinate[1];
 
-		$('.phantom-' + col).css('border-right', '5px solid #75AF96');
+		if(col != 1 && col != 5) {
+			$('.phantom-' + col).css({ borderTop: '5px solid #75AF96' });
+		}
+
+		$('.phantom-' + col).css({ borderRight: '5px solid #75AF96' });
+
+
 
 		if(row > 1) {
 			for(var i = row - 1; i > 0; i--) {
-				$('.col-' + col + '.row-' + i).css('border-right', '5px solid #75AF96');
+				$('.col-' + col + '.row-' + i).css({ borderRight: '5px solid #75AF96' });
 			}
 		}	
 	}
-
 
 	var compare = function(elements, arr) {
 		
@@ -48,6 +53,14 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		});
 	}
 
+	var clearTopBeams = function() {
+		for(var i = 2; i < 9; i++) {
+			if(i !== 5) {
+				$('.phantom-' + i).css({ borderTop: '5px solid transparent' });
+			}
+		};
+	}
+
 	$scope.getRandomBeat = function() {
 		compare('.fa', getRandomArray());
 		$scope.pushedCreate = true;
@@ -63,7 +76,10 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 
 		$('td').each(function() {
 			$(this).css('border-right', '5px solid transparent');
+
 		});
+
+		clearTopBeams();
 
 		$('.note-grouping').css('border-top', '5px solid transparent');
 

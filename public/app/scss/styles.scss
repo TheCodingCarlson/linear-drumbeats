@@ -18,6 +18,9 @@ table {
 td {
 	text-align: right;
 	border-right: 5px solid transparent;
+	&.phantom-2, &.phantom-3, &.phantom-4, &.phantom-6, &.phantom-7, &.phantom-8 {
+		border-top: 5px solid transparent;
+	}
 }
 
 th {
@@ -48,13 +51,13 @@ th {
 }
 
 .staff {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .header {
 	text-align: center;
 	color: $secondary-color;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .labels {
@@ -79,24 +82,6 @@ th {
 .fa {
 	color: $secondary-color;
 	opacity: 0;
-}
-
-.note-grouping {
-	border-top: 5px solid transparent;
-	display: inline-block;
-	width: 30%;
-	&.phantom {
-		
-	}
-	&.reg {
-		&.two {
-			margin-left: 1%;
-		}
-		&.three {
-			margin-left: 9%;
-		
-		}
-	}
 }
 
 @media only screen and (max-width: 450px) {

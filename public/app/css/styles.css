@@ -9,6 +9,8 @@ table {
 td {
   text-align: right;
   border-right: 5px solid transparent; }
+  td.phantom-2, td.phantom-3, td.phantom-4, td.phantom-6, td.phantom-7, td.phantom-8 {
+    border-top: 5px solid transparent; }
 
 th {
   color: #75AF96; }
@@ -32,12 +34,12 @@ th {
   border: none; }
 
 .staff {
-  margin-top: 100px; }
+  margin-top: 50px; }
 
 .header {
   text-align: center;
   color: #75AF96;
-  margin-top: 100px; }
+  margin-top: 50px; }
 
 .labels {
   text-align: right;
@@ -56,15 +58,6 @@ th {
 .fa {
   color: #75AF96;
   opacity: 0; }
-
-.note-grouping {
-  border-top: 5px solid transparent;
-  display: inline-block;
-  width: 30%; }
-  .note-grouping.reg.two {
-    margin-left: 1%; }
-  .note-grouping.reg.three {
-    margin-left: 9%; }
 
 @media only screen and (max-width: 450px) {
   .note-grouping {
