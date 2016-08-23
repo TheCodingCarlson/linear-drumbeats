@@ -43,6 +43,9 @@ th {
 		background-color: $primary-color;
 		outline: 0;
 	}
+	&.create {
+		margin-right: 10px;
+	}
 }
 
 .btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {	
