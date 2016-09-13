@@ -1,7 +1,12 @@
 var app = angular.module('DrummingApp', ['ui.bootstrap']);
 
 app.controller('MainCtrl', ['$scope', function($scope) {
+
+	
+
 	$scope.pushedClear = true;
+
+	var soundsArr = undefined;
 	
 
 	var getRandomNumber = function() {
@@ -14,6 +19,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		for(var i = 0; i < 8; i++) {
 			arr.push([i + 1, getRandomNumber()]);
 		}
+		soundsArr = arr;
 		return arr;
 	};
 
@@ -68,6 +74,10 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		$('.reg').css('border-top', '5px solid #75AF96');
 		
 	};
+
+	// $scope.playBeat = function() {
+		
+	// }
 
 	$scope.clear = function() {
 		$('.fa').each(function() {
