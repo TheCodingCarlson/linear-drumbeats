@@ -1,6 +1,6 @@
-var app = angular.module('DrummingApp', ['ui.bootstrap', 'ngAudio']);
+var app = angular.module('DrummingApp', ['ui.bootstrap', 'AudioService']);
 
-app.controller('MainCtrl', ['$scope', 'ngAudio', function($scope, ngAudio) {
+app.controller('MainCtrl', ['$scope', 'audio', function($scope, audio) {
 
 
 	$scope.pushedClear = true;
@@ -74,10 +74,9 @@ app.controller('MainCtrl', ['$scope', 'ngAudio', function($scope, ngAudio) {
 		
 	};
 
-	// $scope.playBeat = function() {
-	// 	$scope.hihat = ngAudio.load('../sound_clips/high_hat.wav');
-	// 	$scope.hihat.play();
-	// }
+	$scope.playBeat = function() {
+		audio.play('../sound_clips/high_hat.wav');	
+	}
 
 	$scope.clear = function() {
 		$('.fa').each(function() {

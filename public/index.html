@@ -24,17 +24,22 @@
   	<!-- Angular JS -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 
+  	<script type="text/javascript" src="app/js/audio_service.js"></script>
+
   	<!-- Bootstrap UI JS -->
   	<script type="text/javascript" src="app/js/ui-boostrap-2.0.0.js"></script>
 
   	<!-- Angular Audio -->
-  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-audio/1.7.2/angular.audio.js"></script>
+  	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-audio/1.7.2/angular.audio.js"></script> -->
 
   	<!-- App JS -->
     <script type="text/javascript" src="app/js/app.js"></script>
 
 </head>
 <body>
+	<audio id="audio">
+		
+	</audio>
 
 	<div class="container-fluid" ng-controller="MainCtrl">
 		<div class="row header">
@@ -185,7 +190,7 @@
 
 					<button type="button" class="btn btn-primary btn-lg clear" ng-click="clear()" ng-disabled="pushedClear">Clear</button>
 
-					<!-- <button type="button" class="btn btn-primary btn-lg play" ng-click="playBeat()">Play</button> -->
+					<button type="button" class="btn btn-primary btn-lg play" ng-click="playBeat()">Play</button>
 				</div>
 			</div>
 		</div>
