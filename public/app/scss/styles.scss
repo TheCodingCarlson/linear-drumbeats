@@ -27,15 +27,11 @@ th {
 	color: $secondary-color;
 }
 
-.btns {
-	text-align: center;
-	margin: 20px 0;
-}
-
 .btn {
 	background-color: $primary-color;
-	width: 120px;
+	width: 100%;
 	border: none;
+	margin-top: 20px;
 	&:hover {
 		background-color: $primary-color;
 	}
@@ -84,7 +80,9 @@ th {
 
 .fa {
 	color: $secondary-color;
-	opacity: 0;
+	&.note {
+		opacity: 0;
+	}
 }
 
 @media only screen and (max-width: 450px) {

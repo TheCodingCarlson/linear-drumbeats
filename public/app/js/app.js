@@ -1,12 +1,17 @@
-var app = angular.module('DrummingApp', ['ui.bootstrap', 'AudioService']);
-
-app.controller('MainCtrl', ['$scope', 'audio', function($scope, audio) {
-
-
-	$scope.pushedClear = true;
-
-	var soundsArr = undefined;
+$(document).ready(function() {
 	
+	//Sound Clips
+
+	var hihat = new Audio('../app/sound_clips/high_hat.wav');
+	var snare = new Audio('../app/sound_clips/snare.wav');
+	var kick = new Audio('../app/sound_clips/kick.wav');
+	var highTom = new Audio('../app/sound_clips/high_tom.wav');
+	var lowTom = new Audio('../app/sound_clips/low_tom.wav');
+
+	var soundClipArr = [hihat, highTom, snare, lowTom, kick];
+	var soundArr = [];
+
+	//Helper Functions
 
 	var getRandomNumber = function() {
 		return Math.ceil(Math.random() * 5);
@@ -16,9 +21,11 @@ app.controller('MainCtrl', ['$scope', 'audio', function($scope, audio) {
 		var arr = [];
 
 		for(var i = 0; i < 8; i++) {
-			arr.push([i + 1, getRandomNumber()]);
+			var num = getRandomNumber();
+			arr.push([i + 1, num]);
+			soundArr.push(num - 1);
+
 		}
-		soundsArr = arr;
 		return arr;
 	};
 
@@ -32,8 +39,6 @@ app.controller('MainCtrl', ['$scope', 'audio', function($scope, audio) {
 		}
 
 		$('.phantom-' + col).css({ borderRight: '5px solid #75AF96' });
-
-
 
 		if(row > 1) {
 			for(var i = row - 1; i > 0; i--) {
@@ -66,35 +71,21 @@ app.controller('MainCtrl', ['$scope', 'audio', function($scope, audio) {
 		};
 	}
 
-	$scope.getRandomBeat = function() {
-		compare('.fa', getRandomArray());
-		$scope.pushedCreate = true;
-		$scope.pushedClear = false;
-		$('.reg').css('border-top', '5px solid #75AF96');
+	var playBeat = function(key) {
 		
-	};
-
-	$scope.playBeat = function() {
-		audio.play('../sound_clips/high_hat.wav');	
+		var count = 0;
+		setInterval(function() {
+			if(count < 8) {
+				var currentSound = soundClipArr[soundArr[count]];
+				currentSound.load();
+				currentSound.play();
+				count++;
+			}
+		}, 250)
+		
 	}
 
-	$scope.clear = function() {
-		$('.fa').each(function() {
-			$(this).animate({ opacity: 0 }, 500);
-		});
-
-		$('td').each(function() {
-			$(this).css('border-right', '5px solid transparent');
-
-		});
-
-		clearTopBeams();
-
-		$('.note-grouping').css('border-top', '5px solid transparent');
-
-		$scope.pushedCreate = false;
-		$scope.pushedClear = true;
-	};
+	//Change Icon Size Depending on Screen Width
 
 	var windowWidth = $(window).width();
 
@@ -117,4 +108,67 @@ app.controller('MainCtrl', ['$scope', 'audio', function($scope, audio) {
 
 		iconResize(newWindowWidth);
 	});
-}]);
+
+	//Vue Instance
+
+	new Vue({
+		el: '#app',
+
+		data: {
+			pushedCreate: undefined,
+			pushedClear: true,
+			pushedPlay: true,
+			pushedStop: true,
+			startBeat: undefined
+		},
+
+		methods: {
+
+			create: function() {
+
+				compare('.fa.note', getRandomArray());
+				
+				$('.reg').css('border-top', '5px solid #75AF96');
+
+				this.pushedCreate = true;
+				this.pushedClear = false;
+				this.pushedPlay = false;
+			},
+
+			clear: function() {
+				$('.fa.note').each(function() {
+					$(this).animate({ opacity: 0 }, 500);
+				});
+
+				$('td').each(function() {
+					$(this).css('border-right', '5px solid transparent');
+				});
+
+				clearTopBeams();
+
+				$('.note-grouping').css('border-top', '5px solid transparent');
+
+				this.pushedCreate = false;
+				this.pushedClear = true;
+				this.pushedPlay = true;
+
+				soundArr = [];
+			},
+
+			play: function() {
+				playBeat();
+				this.startBeat = setInterval(playBeat, 2000);
+				this.pushedPlay = true;
+				this.pushedStop = false;
+				this.pushedClear = true;
+			},
+
+			stop: function() {
+				clearInterval(this.startBeat);
+				this.pushedPlay = false;
+				this.pushedStop = true;
+				this.pushedClear = false;
+			}
+		}
+	});
+});

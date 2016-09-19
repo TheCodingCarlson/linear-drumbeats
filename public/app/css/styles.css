@@ -15,14 +15,11 @@ td {
 th {
   color: #75AF96; }
 
-.btns {
-  text-align: center;
-  margin: 20px 0; }
-
 .btn {
   background-color: #0F5738;
-  width: 120px;
-  border: none; }
+  width: 100%;
+  border: none;
+  margin-top: 20px; }
   .btn:hover {
     background-color: #0F5738; }
   .btn:active:focus {
@@ -58,8 +55,9 @@ th {
     border-bottom: 5px solid #0F5738; }
 
 .fa {
-  color: #75AF96;
-  opacity: 0; }
+  color: #75AF96; }
+  .fa.note {
+    opacity: 0; }
 
 @media only screen and (max-width: 450px) {
   .note-grouping {
