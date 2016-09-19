@@ -1,7 +1,14 @@
+html {
+  height: 100%; }
+
 body {
-  background-color: #277554;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px; }
+  background: linear-gradient(to bottom right, #77C9D4, #57BC90);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 table {
   width: 100%; }
@@ -13,23 +20,23 @@ td {
     border-top: 5px solid transparent; }
 
 th {
-  color: #75AF96; }
+  color: #FFFFFF; }
 
 .btn {
-  background-color: #0F5738;
+  background-color: #015249;
   width: 100%;
   border: none;
   margin-top: 20px; }
   .btn:hover {
-    background-color: #0F5738; }
+    background-color: #015249; }
   .btn:active:focus {
-    background-color: #0F5738;
+    background-color: #015249;
     outline: 0; }
   .btn.create {
     margin-right: 10px; }
 
 .btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
-  background-color: #0F5738;
+  background-color: #015249;
   border: none; }
 
 .staff {
@@ -37,7 +44,8 @@ th {
 
 .header {
   text-align: center;
-  color: #75AF96;
+  color: #015249;
+  font-family: "Nunito", sans-serif;
   margin-top: 50px; }
 
 .labels {
@@ -46,16 +54,16 @@ th {
   .labels h1 {
     font-size: 1.563em;
     padding-bottom: 8px;
-    color: #75AF96; }
+    color: #015249; }
 
 .bar {
-  border-top: 5px solid #0F5738;
+  border-top: 5px solid #A5A5AF;
   height: 50px; }
   .bar:last-child:not(:only-child) {
-    border-bottom: 5px solid #0F5738; }
+    border-bottom: 5px solid #A5A5AF; }
 
 .fa {
-  color: #75AF96; }
+  color: #FFFFFF; }
   .fa.note {
     opacity: 0; }
 

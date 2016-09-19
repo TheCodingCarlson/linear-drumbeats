@@ -35,14 +35,14 @@ $(document).ready(function() {
 		var row = coordinate[1];
 
 		if(col != 1 && col != 5) {
-			$('.phantom-' + col).css({ borderTop: '5px solid #75AF96' });
+			$('.phantom-' + col).css({ borderTop: '5px solid #015249' });
 		}
 
-		$('.phantom-' + col).css({ borderRight: '5px solid #75AF96' });
+		$('.phantom-' + col).css({ borderRight: '5px solid #015249' });
 
 		if(row > 1) {
 			for(var i = row - 1; i > 0; i--) {
-				$('.col-' + col + '.row-' + i).css({ borderRight: '5px solid #75AF96' });
+				$('.col-' + col + '.row-' + i).css({ borderRight: '5px solid #015249' });
 			}
 		}	
 	}
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
 				compare('.fa.note', getRandomArray());
 				
-				$('.reg').css('border-top', '5px solid #75AF96');
+				$('.reg').css('border-top', '5px solid #015249');
 
 				this.pushedCreate = true;
 				this.pushedClear = false;
