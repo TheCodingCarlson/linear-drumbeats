@@ -71,9 +71,10 @@ $(document).ready(function() {
 		};
 	}
 
-	var playBeat = function(key) {
+	var playBeat = function() {
 		
 		var count = 0;
+		
 		setInterval(function() {
 			if(count < 8) {
 				var currentSound = soundClipArr[soundArr[count]];
