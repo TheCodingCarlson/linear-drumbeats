@@ -2,14 +2,38 @@ $(document).ready(function() {
 	
 	//Sound Clips
 
-	var hihat = new Audio('../app/sound_clips/high_hat.wav');
-	var snare = new Audio('../app/sound_clips/snare.wav');
-	var kick = new Audio('../app/sound_clips/kick.wav');
-	var highTom = new Audio('../app/sound_clips/high_tom.wav');
-	var lowTom = new Audio('../app/sound_clips/low_tom.wav');
+	// var hihat = new Audio('../app/sound_clips/high_hat.wav');
+	// var snare = new Audio('../app/sound_clips/snare.wav');
+	// var kick = new Audio('../app/sound_clips/kick.wav');
+	// var highTom = new Audio('../app/sound_clips/high_tom.wav');
+	// var lowTom = new Audio('../app/sound_clips/low_tom.wav');
+
+	var hihat = $('#hi-hat').get(0);
+	var snare = $('#snare-drum').get(0);
+	var highTom = $('#hi-tom').get(0);
+	var lowTom = $('#low-tom').get(0);
+	var kick = $('#bass-drum').get(0);
 
 	var soundClipArr = [hihat, highTom, snare, lowTom, kick];
+
+	var soundFileArr = [
+		'../app/sound_clips/high_hat.wav', 
+		'../app/sound_clips/snare.wav', 
+		'../app/sound_clips/high_tom.wav', 
+		'../app/sound_clips/low_tom.wav', 
+		'../app/sound_clips/kick.wav'
+	];
+
 	var soundArr = [];
+
+	var prepareSounds = function(arr) {
+		for(var i = 0; i < arr.length; i++) {
+			arr[i].play();
+			arr[i].src = soundFileArr[i];
+		}
+	}
+
+	prepareSounds(soundClipArr);
 
 	//Helper Functions
 
