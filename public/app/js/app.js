@@ -16,24 +16,24 @@ $(document).ready(function() {
 
 	var soundClipArr = [hihat, highTom, snare, lowTom, kick];
 
-	var soundFileArr = [
-		'../app/sound_clips/high_hat.wav', 
-		'../app/sound_clips/snare.wav', 
-		'../app/sound_clips/high_tom.wav', 
-		'../app/sound_clips/low_tom.wav', 
-		'../app/sound_clips/kick.wav'
-	];
-
 	var soundArr = [];
 
-	var prepareSounds = function(arr) {
-		for(var i = 0; i < arr.length; i++) {
-			arr[i].play();
-			arr[i].src = soundFileArr[i];
-		}
-	}
+	// var soundFileArr = [
+	// 	'../app/sound_clips/high_hat.wav', 
+	// 	'../app/sound_clips/snare.wav', 
+	// 	'../app/sound_clips/high_tom.wav', 
+	// 	'../app/sound_clips/low_tom.wav', 
+	// 	'../app/sound_clips/kick.wav'
+	// ];
 
-	prepareSounds(soundClipArr);
+	// var prepareSounds = function(arr) {
+	// 	for(var i = 0; i < arr.length; i++) {
+	// 		arr[i].play();
+	// 		arr[i].src = soundFileArr[i];
+	// 	}
+	// }
+
+	// prepareSounds(soundClipArr);
 
 	//Helper Functions
 
