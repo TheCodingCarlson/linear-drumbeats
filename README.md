@@ -4,7 +4,9 @@
 
 ###What is a Linear Drumbeat?
 
-- A Linear Drumbeat is a drumbeat where no two sound sources (drums and/or cymbals) strike at the same time. Linear drumbeats make for some of the most interesting and unusual drumbeats.
+A Linear Drumbeat is a drumbeat where no two sound sources (drums and/or cymbals) strike at the same time. Linear drumbeats make for some of the most interesting and unusual drumbeats.
+
+[Live Demo](https://linear-drumbeats.herokuapp.com)
 
 ###Tech Used
 
