@@ -12,7 +12,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="app/img/favicon-96x96.png">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -25,23 +25,25 @@
   	<link rel="stylesheet" type="text/css" href="app/css/styles.css">
 </head>
 <body>
+
 	<div id="app" class="container-fluid">
 
-	<!-- Audio Elements -->
-	<audio id="hi-hat" src="app/sound_clips/high_hat.wav"></audio>
-	<audio id="snare-drum" src="app/sound_clips/snare.wav"></audio>
-	<audio id="hi-tom" src="app/sound_clips/high_tom.wav"></audio>
-	<audio id="low-tom" src="app/sound_clips/low_tom.wav"></audio>
-	<audio id="bass-drum" src="app/sound_clips/kick.wav"></audio>
+		<!-- Audio Elements -->
+		<audio id="hi-hat" src="app/sound_clips/high_hat.wav"></audio>
+		<audio id="snare-drum" src="app/sound_clips/snare.wav"></audio>
+		<audio id="hi-tom" src="app/sound_clips/high_tom.wav"></audio>
+		<audio id="low-tom" src="app/sound_clips/low_tom.wav"></audio>
+		<audio id="bass-drum" src="app/sound_clips/kick.wav"></audio>
 
 		<div class="row header">
 			<div class="col-md-12">
 				<h1>Linear Drumbeat Maker</h1>
 			</div>	
 		</div>
+
 		<div class="row">
-			<div class="row wrapper">
-				<div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 staff">
+			<div class="wrapper">
+				<div class="col-lg-8 col-lg-offset-2 staff">
 					<table>
 					
 						<!-- Phantom Row -->
@@ -177,20 +179,22 @@
 				</div>
 			</div>
 		<div>
+
 		<div class="row">
-			<div class="row wrapper">
-				<div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3">
+			<div class="wrapper">
+				<div class="col-lg-8 col-lg-offset-2">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-lg-3">
 							<button type="button" class="btn btn-primary btn-lg create" v-on:click="create" :disabled="pushedCreate"><i class="fa icon fa-music" aria-hidden="true"></i></button>
-						</div>
-						<div class="col-md-3">
+						</div> 
+
+						<div class="col-lg-3">
 							<button type="button" class="btn btn-primary btn-lg clear" v-on:click="clear" :disabled="pushedClear"><i class="fa icon fa-trash-o" aria-hidden="true"></i></button>
 						</div>
-						<div class="col-md-3">
+						<div class="col-lg-3">
 							<button type="button" class="btn btn-primary btn-lg play" v-on:click="play" :disabled="pushedPlay"><i class="fa icon fa-play-circle-o" aria-hidden="true"></i></button>
-						</div>
-						<div class="col-md-3">
+						</div> 
+						<div class="col-lg-3">
 							<button type="button" class="btn btn-primary btn-lg stop" v-on:click="stop" :disabled="pushedStop"><i class="fa icon fa-stop-circle-o" aria-hidden="true"></i></button>
 						</div>
 					</div>
@@ -198,11 +202,18 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Defer tether error until it's actually needed -->
+	<script type="text/javascript">
+		window.Tether = function () {
+		throw new Error('Bootstrap tooltips require Tether.');
+		};
+	</script>
 
 	<!-- jQuery first, then Bootstrap JS. -->
 	<script src="//code.jquery.com/jquery.js"></script>
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
 	<!-- Vue JS -->
 	<script type="text/javascript" src="app/js/vue.js"></script>

@@ -1,28 +1,27 @@
+// SASS Variables
 $background-color: #D9D9D9;
 $blue: #4484CE;
 $note-color: #F19F4D;
 
+$body-font-size: 16px;
 $primary-font: 'Baloo Bhaina', cursive;
 $secondary-font: 'Open Sans', sans-serif;
-
-$body-font-size: 16px;
-
-html {
-    height: 100%;
-}
 
 body {
 	background-color: $background-color;
 	font-family: $secondary-font;
 	font-size: $body-font-size;
-	height: 100%;
-    margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 table {
 	width: 100%;
+}
+
+.container-fluid .row {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 td {
@@ -48,9 +47,6 @@ th {
 	&:active:focus {
 		background-color: $blue;
 		outline: 0;
-	}
-	&.create {
-		margin-right: 10px;
 	}
 }
 

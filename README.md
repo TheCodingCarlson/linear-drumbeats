@@ -12,12 +12,11 @@ A Linear Drumbeat is a drumbeat where no two sound sources (drums and/or cymbals
 
 - [Vue.js](https://vuejs.org)
 - Sass
-- Boostrap
+- Bootstrap 4
 - HTML
 - Gulp
 - Node.js
 - Express
-
 
 ###Known Issues
 
