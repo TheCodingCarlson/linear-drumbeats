@@ -94,6 +94,10 @@ th {
 	margin: 0 auto;
 }
 
+.no-gutter {
+	padding: 0 5px;
+}
+
 @media only screen and (max-width: 450px) {
 	.note-grouping {
 		width: 29%;
