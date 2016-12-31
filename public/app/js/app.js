@@ -2,11 +2,11 @@ $(document).ready(function() {
 	
 	//Sound Clips
 
-	// var hihat = new Audio('../app/sound_clips/high_hat.wav');
-	// var snare = new Audio('../app/sound_clips/snare.wav');
-	// var kick = new Audio('../app/sound_clips/kick.wav');
-	// var highTom = new Audio('../app/sound_clips/high_tom.wav');
-	// var lowTom = new Audio('../app/sound_clips/low_tom.wav');
+	// var hihat = new Audio('../app/sound_clips/high_hat.mp3');
+	// var snare = new Audio('../app/sound_clips/snare.mp3');
+	// var kick = new Audio('../app/sound_clips/kick.mp3');
+	// var highTom = new Audio('../app/sound_clips/high_tom.mp3');
+	// var lowTom = new Audio('../app/sound_clips/low_tom.mp3');
 
 	var hihat = $('#hi-hat').get(0);
 	var snare = $('#snare-drum').get(0);
