@@ -6,7 +6,7 @@
 
 A Linear Drumbeat is a drumbeat where no two sound sources (drums and/or cymbals) strike at the same time. Linear drumbeats make for some of the most interesting and unusual drumbeats. I made this simple VueJS project to create random linear patterns that I normally wouldn't think of. The app creates and draws the beat using drum notation. Users can also hit the play button to hear how the beat would sound if played by a drummer.
 
-[Linear Drumbeats]: linear_drumbeats.jpg
+![Linear Drumbeats](linear_drumbeats.jpg "Linear Drumbeats")
 
 [Live Demo](https://linear-drumbeats.herokuapp.com)
 
